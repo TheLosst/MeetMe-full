@@ -1,0 +1,21 @@
+services:
+  postgres:
+    build: ./backend/app/postgres
+    ports:
+      - 1488:5432
+  back:
+    build:
+      context: backend
+    restart: unless-stopped
+    ports:
+      - 5000:5000
+    depends_on:
+      - postgres
+  # nginx:
+  #   build:
+  #     dockerfile: ./nginx/Dockerfile
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - back
+  #   ports:
+  #     - "80:80"
