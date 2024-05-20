@@ -1,1 +1,1 @@
-Переделка MeetMe в docker и создание нормального backа)
+Переделка MeetMe в docker и создание нормального backend'a)
