@@ -37,16 +37,3 @@ from INT,
 to INT,
 text VARCHAR (99999)
 );
-
-/usr/share/nginx/html/
-
-sudo systemctl start nginx
-sudo systemctl start mariadb
-sudo systemctl start php-fpm
-
-,birthDay = '$birthDate',withMeets = '$withMeets',targetMeet = '$targetMeet',aboutUser = '$about'
-
-
-
-ALTER TABLE users
-ADD isRemoved INT; 

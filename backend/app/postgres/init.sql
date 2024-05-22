@@ -22,7 +22,7 @@ CREATE TABLE messages (
   from_uuid INTEGER NOT NULL,
   to_uuid INTEGER NOT NULL,
   text VARCHAR(99999),
-  clock TIMESTAMP DEFAULT now(),
+  clock TIMESTAMP DEFAULT (timezone('utc-3', now())),
   is_read BOOLEAN DEFAULT '0'
 );
 --test users
