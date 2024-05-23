@@ -2,7 +2,6 @@ const express = require("express");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const fs = require("fs");
-// const { Pool } = require("pg");
 const argon2 = require("argon2");
 
 const app = express();
@@ -12,14 +11,6 @@ const routes = require('./routes');
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-// const pool = new Pool({
-//   user: "myuser",
-//   host: "postgres",
-//   database: "mydb",
-//   password: "mysecretpassword",
-//   port: 5432,
-// });
 
 const router = express.Router();
 
